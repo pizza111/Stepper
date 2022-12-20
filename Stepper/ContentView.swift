@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var vm = ViewModel()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Current number: \(vm.currentNumber)")
+            
+            HStack {
+                Button("Minus 1") {
+                    vm.currentNumber -= 1
+                }
+                Button("Plus 1") {
+                    vm.currentNumber += 1
+                }
+            }
         }
-        .padding()
     }
 }
 
