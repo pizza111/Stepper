@@ -15,12 +15,8 @@ struct ContentView: View {
             Text("Current number: \(vm.currentNumber)")
             
             HStack {
-                Button("Minus 1") {
-                    vm.currentNumber -= 1
-                }
-                Button("Plus 1") {
-                    vm.currentNumber += 1
-                }
+                Button("Minus 1", action: vm.minusOne)
+                Button("Plus 1", action: vm.plusOne)
             }
         }
     }
