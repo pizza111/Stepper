@@ -9,4 +9,12 @@ import Foundation
 
 class ViewModel: ObservableObject {
     @Published var currentNumber = 0
+    
+    func minusOne() {
+        currentNumber -= 1
+    }
+    
+    func plusOne() {
+        currentNumber += 1
+    }
 }
